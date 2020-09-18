@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import Header from './Components/Header';
+import { BrowserRouter as BRouter, withRouter, HashRouter, Route} from 'react-router-dom';
+import Default from './Components/Default';
+import Contact from './Contact';
 
-function App() {
+
+class App extends Component {
+  render(){
   return (
+    <HashRouter>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <body>
+        <Header></Header>
+        <div className="content">
+        <BRouter>
+        <Route exact path="/" component={withRouter(Default)}/>
+        <Route exact path="/contact"component={withRouter(Contact)}/>
+        </BRouter>
+        </div>
+      </body>
     </div>
+    </HashRouter>
   );
+  }
 }
-
 export default App;
+

@@ -1,0 +1,122 @@
+.ButtonHeader{
+    border: 20ch;
+    background-color: transparent;  
+    border-color: aliceblue;
+    border-radius: 6px;
+    border: 2px solid teal;
+    color: teal;
+}
+.ButtonHeader:hover{
+    background-color: orange;
+}
+.ButtonHeader:active {
+    background-color: #3e8e41;
+    transform: translateY(4px);
+  }
+.ButtonHeader .tooltiptext{
+    font-size:10px;
+    visibility: hidden;
+    width: 100px;
+    background-color: green;
+    color: #fff;
+    border-radius: 6px;
+    padding: 1px;
+    position: absolute;;
+    z-index: 1;
+  }
+.ButtonHeader:hover .tooltiptext {
+    visibility: visible;
+    display:table;
+  }
+.button2 {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+   
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  .button2:hover{
+    background-color: orange;
+  }
+.button2 span {
+    
+    position: relative;
+    transition: 0.5s;
+  }
+  
+.button2 span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+.button2:hover span {
+    padding-right: 25px;
+  }
+  
+.button2:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+.button2 .tooltiptext{
+    font-size:10px;
+    visibility: hidden;
+    width: 100px;
+    background-color: green;
+    color: #fff;
+    border-radius: 6px;
+    padding: 1px;
+    position: absolute;;
+    z-index: 1;
+  }
+.button2:hover .tooltiptext {
+    visibility: visible;
+    display:table;
+    padding-right: 0px;
+  }
+
+  .button3 {
+    position: relative;
+    background-color: #FFFFFF;
+    border: 2px solid teal;
+    color: #000800;
+    border-radius: 6px;
+    text-align: center;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .button3:after {
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+  }
+  .button3:hover{
+    background-color: orange;
+    visibility: visible;
+    display:table;
+  }
+.button3:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+  }
+
